@@ -6,8 +6,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
+        <groupId>io.projectenv.commons</groupId>
         <artifactId>root</artifactId>
-        <groupId>io.projectenv.core</groupId>
         <version>${revision}</version>
     </parent>
 
