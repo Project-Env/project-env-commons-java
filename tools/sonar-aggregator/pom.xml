@@ -6,8 +6,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
+        <groupId>io.projectenv.commons</groupId>
         <artifactId>tools</artifactId>
-        <groupId>io.projectenv.core</groupId>
         <version>${revision}</version>
     </parent>
 
@@ -15,83 +15,33 @@
 
     <dependencies>
         <dependency>
-            <groupId>io.projectenv.core</groupId>
-            <artifactId>cli</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.projectenv.core</groupId>
-            <artifactId>cli-api</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.projectenv.core.commons</groupId>
+            <groupId>io.projectenv.commons</groupId>
             <artifactId>archive</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>io.projectenv.core.commons</groupId>
+            <groupId>io.projectenv.commons</groupId>
             <artifactId>native-image</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>io.projectenv.core.commons</groupId>
+            <groupId>io.projectenv.commons</groupId>
             <artifactId>process</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>io.projectenv.core.commons</groupId>
+            <groupId>io.projectenv.commons</groupId>
             <artifactId>string-substitutor</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>io.projectenv.core.commons</groupId>
+            <groupId>io.projectenv.commons</groupId>
             <artifactId>system</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>io.projectenv.core.commons</groupId>
+            <groupId>io.projectenv.commons</groupId>
             <artifactId>system-test</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.projectenv.core.toolsupport</groupId>
-            <artifactId>tool-support-spi</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.projectenv.core.toolsupport</groupId>
-            <artifactId>tool-support-commons</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.projectenv.core.toolsupport</groupId>
-            <artifactId>maven-support</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.projectenv.core.toolsupport</groupId>
-            <artifactId>gradle-support</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.projectenv.core.toolsupport</groupId>
-            <artifactId>jdk-support</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.projectenv.core.toolsupport</groupId>
-            <artifactId>nodejs-support</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.projectenv.core.toolsupport</groupId>
-            <artifactId>generic-tool-support</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.projectenv.core.toolsupport</groupId>
-            <artifactId>git-support</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>

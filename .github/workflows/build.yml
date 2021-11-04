@@ -6,13 +6,8 @@ on:
 
 jobs:
   build:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [macos-latest, windows-latest, ubuntu-latest]
+    runs-on: ubuntu-latest
     steps:
-      - uses: ilammy/msvc-dev-cmd@v1
-        if: ${{ matrix.os == 'windows-latest'}}
       - uses: actions/checkout@v2
       - uses: actions/cache@v1
         with:
@@ -26,13 +21,8 @@ jobs:
           restore-keys: ${{ runner.os }}-m2
       - uses: Project-Env/project-env-github-action@v1.0.0
         with:
-          cli-version: '3.3.0'
-      - run: mvn -B -Psonar -Pnative-image verify
-        if: ${{ matrix.os == 'ubuntu-latest' && github.actor != 'dependabot[bot]' }}
+          cli-version: '3.4.0'
+      - run: mvn -B -Psonar verify
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-      - run: mvn -B -Pnative-image verify
-        if: ${{ matrix.os != 'ubuntu-latest' || github.actor == 'dependabot[bot]' }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
