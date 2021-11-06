@@ -44,6 +44,11 @@
             <artifactId>system-test</artifactId>
             <version>${project.version}</version>
         </dependency>
+        <dependency>
+            <groupId>io.projectenv.commons</groupId>
+            <artifactId>gson</artifactId>
+            <version>${project.version}</version>
+        </dependency>
     </dependencies>
 
     <build>
