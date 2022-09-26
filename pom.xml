@@ -32,16 +32,16 @@
         <commons-io.version>2.11.0</commons-io.version>
         <commons-collections4.version>4.4</commons-collections4.version>
         <xz.version>1.9</xz.version>
-        <junit-jupiter.version>5.8.2</junit-jupiter.version>
+        <junit-jupiter.version>5.9.0</junit-jupiter.version>
         <assertj-core.version>3.23.1</assertj-core.version>
         <commons-text.version>1.9</commons-text.version>
-        <graalvm.version>22.1.0.1</graalvm.version>
+        <graalvm.version>22.2.0</graalvm.version>
         <reflections.version>0.10.2</reflections.version>
         <log4j.version>2.18.0</log4j.version>
-        <mockito-inline.version>4.6.0</mockito-inline.version>
+        <mockito-inline.version>4.8.0</mockito-inline.version>
         <junit-jupiter.version>5.8.1</junit-jupiter.version>
 
-        <flatten-maven-plugin.version>1.2.7</flatten-maven-plugin.version>
+        <flatten-maven-plugin.version>1.3.0</flatten-maven-plugin.version>
         <maven-compiler-plugin.version>3.10.1</maven-compiler-plugin.version>
         <maven-surefire-plugin.version>3.0.0-M7</maven-surefire-plugin.version>
         <maven-resources-plugin.version>3.2.0</maven-resources-plugin.version>
