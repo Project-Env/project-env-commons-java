@@ -34,7 +34,7 @@
         <xz.version>1.9</xz.version>
         <junit-jupiter.version>5.9.0</junit-jupiter.version>
         <assertj-core.version>3.23.1</assertj-core.version>
-        <commons-text.version>1.9</commons-text.version>
+        <commons-text.version>1.10.0</commons-text.version>
         <graalvm.version>22.2.0</graalvm.version>
         <reflections.version>0.10.2</reflections.version>
         <log4j.version>2.18.0</log4j.version>
