@@ -1,16 +1,15 @@
 package io.projectenv.core.commons.nativeimage;
 
-import com.oracle.svm.core.jdk.Resources;
 import com.oracle.svm.core.jdk.proxy.DynamicProxyRegistry;
 import io.projectenv.core.commons.process.ProcessOutput;
 import org.graalvm.nativeimage.ImageSingletons;
+import org.graalvm.nativeimage.hosted.RuntimeClassInitialization;
 import org.graalvm.nativeimage.hosted.RuntimeReflection;
+import org.graalvm.nativeimage.hosted.RuntimeResourceAccess;
 import org.reflections.Reflections;
 import org.reflections.scanners.Scanners;
 import org.reflections.util.ConfigurationBuilder;
 
-import java.io.IOException;
-import java.io.InputStream;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
@@ -25,18 +24,16 @@ public final class NativeImageHelper {
         // noop
     }
 
-    public static void registerResource(String resource) throws IOException {
-        try (InputStream inputStream = ClassLoader.getSystemResourceAsStream(resource)) {
-            if (inputStream == null) {
-                throw new IllegalArgumentException("resource " + resource + " could not be resolved");
-            }
-
-            ProcessOutput.writeInfoMessage("registering resource {0} in native image", resource);
-            Resources.registerResource(resource, inputStream);
-        }
+    public static void registerResource(String resource) {
+        ProcessOutput.writeInfoMessage("registering resource {0} in native image", resource);
+        RuntimeResourceAccess.addResource(NativeImageHelper.class.getModule(), resource);
     }
 
-    public static void registerService(Class<?> clazz) throws IOException {
+    public static void initializeAtBuildTime(Class<?> clazz) {
+        RuntimeClassInitialization.initializeAtBuildTime(clazz);
+    }
+
+    public static void registerService(Class<?> clazz) {
         registerClassAndSubclassesForReflection(clazz);
         registerResource(SERVICE_REGISTRATION_FILE_PATH + clazz.getName());
     }
