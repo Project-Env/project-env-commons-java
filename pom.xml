@@ -29,7 +29,7 @@
         <gson.version>2.10.1</gson.version>
         <commons-compress.version>1.26.0</commons-compress.version>
         <commons-lang3.version>3.12.0</commons-lang3.version>
-        <commons-io.version>2.15.1</commons-io.version>
+        <commons-io.version>2.16.1</commons-io.version>
         <commons-collections4.version>4.4</commons-collections4.version>
         <xz.version>1.9</xz.version>
         <junit-jupiter.version>5.10.0</junit-jupiter.version>
