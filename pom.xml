@@ -17,14 +17,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <sonar.projectName>project-env-commons-java</sonar.projectName>
-        <sonar.projectKey>Project-Env_project-env-commons-java</sonar.projectKey>
-        <sonar.moduleKey>${project.artifactId}</sonar.moduleKey>
-        <sonar.organization>project-env</sonar.organization>
-        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-        <sonar.coverage.jacoco.xmlReportPaths>${maven.multiModuleProjectDirectory}/tools/sonar-aggregator/target/site/jacoco-aggregate/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
-        <sonar.coverage.exclusions>**/*Exception.java,**/nativeimage/**</sonar.coverage.exclusions>
-
         <immutable.version>2.10.0</immutable.version>
         <gson.version>2.10.1</gson.version>
         <commons-compress.version>1.26.0</commons-compress.version>
@@ -48,15 +40,12 @@
         <maven-deploy-plugin.version>3.1.1</maven-deploy-plugin.version>
         <maven-jar-plugin.version>3.3.0</maven-jar-plugin.version>
         <maven-source-plugin.version>3.3.0</maven-source-plugin.version>
-        <sonar-maven-plugin.version>3.9.1.2184</sonar-maven-plugin.version>
-        <jacoco-maven-plugin.version>0.8.12</jacoco-maven-plugin.version>
         <maven-failsafe-plugin.version>3.1.2</maven-failsafe-plugin.version>
         <native-maven-plugin.version>0.9.7.1</native-maven-plugin.version>
     </properties>
 
     <modules>
         <module>code</module>
-        <module>tools</module>
     </modules>
 
     <dependencyManagement>
@@ -196,16 +185,6 @@
                     <configuration>
                         <skip>true</skip>
                     </configuration>
-                </plugin>
-                <plugin>
-                    <groupId>org.jacoco</groupId>
-                    <artifactId>jacoco-maven-plugin</artifactId>
-                    <version>${jacoco-maven-plugin.version}</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.sonarsource.scanner.maven</groupId>
-                    <artifactId>sonar-maven-plugin</artifactId>
-                    <version>${sonar-maven-plugin.version}</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
